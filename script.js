@@ -67,6 +67,7 @@ addBook.addEventListener('click', () => {
     render()
     emptyAll() 
     deleteCard()
+    cardRead()
     containerNew.classList.toggle('hide')
 })
 
@@ -95,12 +96,27 @@ function deleteCard() {
     })
 }
 
+function cardRead() {
+    const cards = document.querySelectorAll('.bi-eye')
+
+    cards.forEach((card) => {
+        card.addEventListener('click', () => {
+            acard = card.parentElement.previousSibling.previousSibling 
+            if(acard.innerHTML == "Read") {
+                acard.innerHTML = "Not read"
+            } else {
+                acard.innerHTML = "Read"
+            }
+        })
+    })
+}
 
 function exampleCard() {
     myLibrary.push(new Book('The Hobbit', 'J.R.R. Tolkien', '295', "Read"))
     createCard()
     emptyAll()
     deleteCard()
+    cardRead()
 }
 
 exampleCard()
