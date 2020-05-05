@@ -88,3 +88,23 @@ input[type= number] {
 h1 {
     color: #17a2b8;
 }
+
+@media only screen and (max-width: 600px) {
+    .container-new {
+        width: 100%;
+    }
+
+    input[type= text] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    input[type= number] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .new-book {
+        margin-top: 20px;
+    }
+}
