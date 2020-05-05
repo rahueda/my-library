@@ -2,6 +2,20 @@ body {
  padding: 10px;
 }
 
+body::after {
+    content: "";
+    background-image: url("library.jpg");
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background-size: cover;
+}
+
 .hide {
     display: none;
 }
@@ -12,7 +26,7 @@ body {
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
-    background-color: rgb(255, 255, 255);
+    
     color: #444;
 }
 
@@ -44,15 +58,20 @@ input[type= number] {
 
 .card {
     margin-top: 20px;
+    box-shadow: 2px 2px 5px black;
 }
 
 .new-book {
+    color: #17a2b8;
     margin: auto;
     font-size: 50px;
+    font-weight: 900;
     width: 80px;
     height: 80px;
-    background-color: #fff;
     border-radius: 70px;
+    border-color: #17a2b8;
+    box-shadow: 1px 1px 5px #17a2b8;
+    text-shadow:1px 1px 1px black, 2px 2px 5px #17a2b8;
 }
 
 .footer {
@@ -64,4 +83,8 @@ input[type= number] {
 
 .top {
     padding-top: 10px;
+}
+
+h1 {
+    color: #17a2b8;
 }
