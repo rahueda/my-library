@@ -30,13 +30,11 @@ function render() {
     const pages = document.querySelector('#pages').value
     const valread = document.querySelector('#read')
     let read = ''
-
-    if(valread.checked == true) {
-        read = 'Read'
-    } else {
-        read = 'Not read'
-    }
-
+        if(valread.checked == true) {
+            read = 'Read'
+        } else {
+            read = 'Not read'
+        }
     addBookToLibrary(title, author, pages, read)
     createCard()
 }
@@ -60,8 +58,8 @@ function createCard() {
                                 <path fill-rule="evenodd" d="M14.5 3a1 1 0 01-1 1H13v9a2 2 0 01-2 2H5a2 2 0 01-2-2V4h-.5a1 1 0 01-1-1V2a1 1 0 011-1H6a1 1 0 011-1h2a1 1 0 011 1h3.5a1 1 0 011 1v1zM4.118 4L4 4.059V13a1 1 0 001 1h6a1 1 0 001-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" clip-rule="evenodd"/>
                             </svg>
                         </div>`  
-        showBook.appendChild(card)
 
+        showBook.appendChild(card)
         cardRead(card.querySelector('.bi-eye'))
     })
 }
@@ -88,7 +86,6 @@ cancelAdd.addEventListener('click', () => {
 
 function deleteCard() {
     const del = document.querySelectorAll('.del')
-
     del.forEach((delCard) => {
         delCard.addEventListener('click', () => {
             if(delCard.parentNode.parentNode.parentNode !== null) {
